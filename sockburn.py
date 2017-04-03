@@ -28,7 +28,7 @@ def receive(port):
     s.listen(1)
     total = 0
     conn, addr = s.accept()
-    om = ometer.OMeter("MB", ITERATIONS*BUFSIZE)
+    om = ometer.OMeter("MB", ITERATIONS*BUFSIZE/1024.0/1024.0)
     while total < ITERATIONS*BUFSIZE:
         data = conn.recv(BUFSIZE)
         actual = len(data)
