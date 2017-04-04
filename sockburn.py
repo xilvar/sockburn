@@ -1,6 +1,3 @@
-#from gevent import monkey
-#monkey.patch_all()
-
 import argparse
 import socket
 import ometer
@@ -47,8 +44,5 @@ def run():
         send(ns.host, ns.port)
     elif ns.mode == "r":
         receive(ns.port)
-
-        #send()
-    #receive()
 
 run()
