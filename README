@@ -2,13 +2,13 @@ sockburn
 
 Sockburn provides a tcp send/recv mechanism which sends large bulky streams of data as rapidly
 as possible between two executions of itself. It is very lightweight, portable python2 code
-which runs fine with no extra libraries on linux, windows, and freebsd. It is currently
+which runs on default python with no extra libraries on linux, windows, and freebsd. It is currently
 sufficient for its purpose but will eventually be changed into a full select reactor to add
 further features (udp, multicast, full duplex, mixed mode, multi-port, etc)
 
 Typical use is to run instances on two separate machines in order to test optimistic wifi
 network conditions between the two machines. It can be used to assess issues such as slow
-TimeMachine backups, or video streaming issues.
+TimeMachine backups, wifi or video streaming issues.
 
 Ex:
 On machine A (192.168.1.6) wait to receive:
